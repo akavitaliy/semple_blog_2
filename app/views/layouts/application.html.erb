@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <br>
+    <%= link_to 'Новая статья', new_post_path %>
+    |
+    <%= link_to 'Все статьи', posts_path %>
+
     <%= yield %>
   </body>
 </html>
