@@ -1,0 +1,14 @@
+ru:
+  common:
+    errors: 'Ошибка'
+    back: 'Назад'    
+  posts:
+    new:
+      title: 'Новая статья'
+    edit:
+      title: 'Редактировать статью'
+    index:
+      title: 'Статьи'    
+    form:
+      submit:
+        '%{action} статью'    
