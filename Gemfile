@@ -29,6 +29,8 @@ gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'carrierwave', '~> 2.0'
 gem "mini_magick"
+gem 'will_paginate', '~> 3.1.0'
+
 
 
 

@@ -1,7 +1,10 @@
 ru:
   common:
     errors: 'Ошибка'
-    back: 'Назад'    
+    back: 'Назад'   
+  will_paginate:
+    previous_label: '&larr; туда'
+    next_label: 'сюда &rarr;'   
   posts:
     new:
       title: 'Новая статья'

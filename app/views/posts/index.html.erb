@@ -1,4 +1,10 @@
 <h1><%= t('posts.index.title') %></h1>
 
-<%= render @posts %>
+<% if @posts.any? %>  
+  <%= render @posts %>  
+  <div class="digg_pagination">
+    <%= will_paginate %>
+  </div>
+<% end %>
+
 
