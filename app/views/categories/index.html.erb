@@ -1,0 +1,31 @@
+<h2><%= t('.title') %></h2>
+
+<div class="buttons_panel">
+	<%= link_to 'Новая категория', new_category_path, class: 'btn btn-success' %>
+</div>
+
+<section id="categories">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Название</th>
+				<th></th>
+			</tr>
+		</thead>
+		<body>
+			<% if @categories.present? %>
+			<% @categories.each_with_index do |category, index| %>
+				<tr>
+					<td><%= index + 1 %></td>
+					<td><%= category.name %></td>
+					<td>
+						<%= link_to 'Изменить', edit_category_path(category), class: 'badge bg-warning text-dark' %>
+						<%= link_to 'Удалить', category_path(category), method: :delete, data: { confirm: 'Вы уверены?' }, class: 'badge bg-danger text-dark' %>
+					</td>
+				</tr>
+			<% end %>
+			<% end %>
+		</body>
+	</table>
+</section>

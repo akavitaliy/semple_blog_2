@@ -7,7 +7,9 @@ ru:
         title: 'Название'
         summary: 'Краткая статья'
         body: 'Содержание статьи'  
-        all_tags: 'Теги'
+        all_tags: 'Теги' 
+      category:
+        name: 'Имя категории'               
     errors:    
       messages:
         blank: 'не должно быть пустым!'    

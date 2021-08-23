@@ -1,8 +1,10 @@
-class CatigoriesController < ActionController::Base
+class CategoriesController < ActionController::Base
+
+  layout "application"
 
   before_action :set_category, only: [:show, :edit, :update, :destroy ]
 
-  def inndex  
+  def index  
     @categories = Category.all
   end
 
@@ -13,8 +15,8 @@ class CatigoriesController < ActionController::Base
     @category = Category.new
   end
 
-  def creat
-    @category = Category.new(category_purams)
+  def create
+    @category = Category.new(category_params)
     if @category.save
       redirect_to categories_path, success: 'Категория успешно создана!'
     else
@@ -27,7 +29,7 @@ class CatigoriesController < ActionController::Base
   end
 
   def update
-    if @category.update_attributes(category_params)
+    if @category.update(category_params)
       redirect_to categories_path, success: 'Категория обнавлена'
     else
       flash[:danger] = 'Категория не обнавлена!'
@@ -37,7 +39,7 @@ class CatigoriesController < ActionController::Base
 
   def destroy
     @category.destroy
-    redirect_to categories_path, :success 'Статья удалена!'
+    redirect_to categories_path, success: 'Статья удалена!'
   end
 
   private

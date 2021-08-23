@@ -6,8 +6,8 @@ class Post < ApplicationRecord
 
   has_many :taggings
   has_many :tags, through: :taggings
-
-  validates :title, presence: true
+  belongs_to :category
+  
   validates :summary, presence: true 
   validates :body, presence: true   
 
