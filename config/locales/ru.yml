@@ -5,26 +5,30 @@ ru:
   will_paginate:
     previous_label: '&larr; туда'
     next_label: 'сюда &rarr;'   
-  posts:
-    new:
-      title: 'Новая статья'
-    edit:
-      title: 'Редактировать статью'
+  posts:    
     index:
-      title: 'Статьи'    
-    form:
-      submit:
-        '%{action} статью'    
-  categories:
-    index:
-      title: 'Все категории'
-    new:
-      title: 'Новая категория'
-    edit:
-      title: 'Редактировать категорию' 
-    form:
-      submit: 
-        '%{action} категорию' 
+      title: 'Статьи'     
+  admin:
+    posts:
+      new:
+        title: 'Новая статья'
+      edit:
+        title: 'Редактировать статью'
+      index:
+        title: 'Статьи'    
+      form:
+        submit:
+          '%{action} статью'    
+    categories:
+      index:
+        title: 'Все категории'
+      new:
+        title: 'Новая категория'
+      edit:
+        title: 'Редактировать категорию' 
+      form:
+        submit: 
+          '%{action} категорию' 
         
   
 
