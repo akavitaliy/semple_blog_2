@@ -8,8 +8,10 @@ ru:
         summary: 'Краткая статья'
         body: 'Содержание статьи'  
         all_tags: 'Теги' 
+        parent_id: 'Категория'
       category:
-        name: 'Имя категории'               
+        name: 'Имя категории' 
+        parent_id: 'Родительская категория'              
     errors:    
       messages:
         blank: 'не должно быть пустым!'    

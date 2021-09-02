@@ -1,0 +1,11 @@
+<div class="submenu">
+  <h2>Категории</h2>
+   <ul class="nav flex-column nav-pills">
+    <%  Category.roots.each do |category| %>
+      <li class="nav-item">
+        <%= link_to category.name, category, class: "nav-link #{'active' if current_page?(category_path(category)) || @post.present? && @post.category == category}" %> 
+        <%# <%= link_to category.descendants, category.descendants %>
+        <%# <%= render "submenu_categories", categories: {category.root.descendants.arrange} %> 
+    <% end %>
+   </ul>    
+</div>

@@ -1,4 +1,5 @@
 class CategoriesController < ActionController::Base
+  before_action :authenticate_user!, except: :show
 
   layout "application"
 
@@ -8,30 +9,37 @@ class CategoriesController < ActionController::Base
     @categories = Category.all
   end
 
-  def show            
+  def show   
+    @posts = Post.where(category_id: [@category.id])         
   end
 
   def new
     @category = Category.new
+    @categories = Category.all.order(:name)
   end
 
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to categories_path, success: 'Категория успешно создана!'
+      redirect_to categories_path 
+      flash[:success] = 'Категория создана!'
     else
+      @categories = Category.all.order(:name)
       flash[:danger] = 'Категория не создана!'
       render :new
     end
   end
 
-  def edit    
+  def edit  
+    @categories = Category.where("id != #{@category.id}").order(:name)  
   end
 
   def update
     if @category.update(category_params)
-      redirect_to categories_path, success: 'Категория обнавлена'
+      redirect_to categories_path  
+      flash[:success] = 'Категория обнавлена!'
     else
+      @categories = Category.where("id != #{@category.id}").order(:name)
       flash[:danger] = 'Категория не обнавлена!'
       render :edit 
     end
@@ -39,7 +47,8 @@ class CategoriesController < ActionController::Base
 
   def destroy
     @category.destroy
-    redirect_to categories_path, success: 'Статья удалена!'
+    redirect_to categories_path  
+    flash[:success] = 'Категория удалена!'
   end
 
   private
@@ -49,7 +58,7 @@ class CategoriesController < ActionController::Base
   end
 
   def category_params
-    params.require(:category).permit(:name)
+    params.require(:category).permit(:name, :parent_id)
   end
       
      

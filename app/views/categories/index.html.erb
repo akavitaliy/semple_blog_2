@@ -10,6 +10,7 @@
 			<tr>
 				<th>#</th>
 				<th>Название</th>
+				<th>Родительска категория</th>
 				<th></th>
 			</tr>
 		</thead>
@@ -19,6 +20,7 @@
 				<tr>
 					<td><%= index + 1 %></td>
 					<td><%= category.name %></td>
+					<td><%= category.parent.name if category.parent.present? %></td>
 					<td>
 						<%= link_to 'Изменить', edit_category_path(category), class: 'badge bg-warning text-dark' %>
 						<%= link_to 'Удалить', category_path(category), method: :delete, data: { confirm: 'Вы уверены?' }, class: 'badge bg-danger text-dark' %>

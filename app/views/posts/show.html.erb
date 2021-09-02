@@ -8,10 +8,11 @@
         <%= link_to  @post.category.name, @post.category, class: 'badge rounded-pill bg-success' %> 
       <% end %>
 
-      <%= link_to  'Изменить', edit_post_path(@post), class: 'badge bg-warning text-dark' %>      
+      <% if user_signed_in? %>
+        <%= link_to  'Изменить', edit_post_path(@post), class: 'badge bg-warning text-dark' %>            
+        <%= link_to  'Удалить', post_path(@post), method: :delete, data: {confirm: 'Вы уверены?'}, class: 'badge bg-danger text-dark' %>
+      <% end %>
       
-      <%= link_to  'Удалить', post_path(@post), method: :delete, data: {confirm: 'Вы уверены?'}, class: 'badge bg-danger text-dark' %>
-    
     </small>
   </section>
 
