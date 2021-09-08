@@ -1,7 +1,5 @@
-class CategoriesController < ActionController::Base
+class CategoriesController < ApplicationController
   
-  layout "application"
-
   before_action :set_category, only: :show  
 
   def show   

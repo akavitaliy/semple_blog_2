@@ -1,7 +1,9 @@
 ru:
   common:
     errors: 'Ошибка'
-    back: 'Назад'   
+    back: 'Назад' 
+    create: 'Создать' 
+    edit: 'Редактировать'   
   will_paginate:
     previous_label: '&larr; туда'
     next_label: 'сюда &rarr;'   
@@ -29,6 +31,10 @@ ru:
       form:
         submit: 
           '%{action} категорию' 
-        
+  devise:
+    registrations:
+      new:
+        title: 'Регистрация'
+
   
 

@@ -1,0 +1,17 @@
+en:
+  activerecord:
+    models:
+      post: 'Aricle'
+    attributes:
+      post:
+        title: 'Title'
+        summary: 'Summary'
+        body: 'Body'  
+        all_tags: 'Tags' 
+        parent_id: 'Category'
+      category:
+        name: 'Title' 
+        parent_id: 'Parent category'              
+    errors:    
+      messages:
+        blank: "Can't be blank"    

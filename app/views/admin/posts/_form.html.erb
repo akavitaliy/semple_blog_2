@@ -43,7 +43,7 @@
   <br>
 
   <div class="form-group">
-    <%= f.submit t('.submit', action: @post.new_record? ? 'Создать' : 'Изменить'), class: 'btn btn-success' %> 
+    <%= f.submit t('.submit', action: @post.new_record? ? t('common.create') : t('common.edit')), class: 'btn btn-success' %> 
     <%= link_to t('common.back'), :back, class: 'btn btn-primary' %>   
   </div>   
   <br>
