@@ -17,7 +17,7 @@ class Admin::CategoriesController < Admin::AdminController
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to categories_path 
+      redirect_to admin_categories_path
       flash[:success] = 'Категория создана!'
     else
       @categories = Category.all.order(:name)

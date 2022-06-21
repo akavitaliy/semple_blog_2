@@ -33,6 +33,8 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'ancestry', '~> 2.1'
 gem 'devise'
 
+gem 'ffi'
+
 
 
 

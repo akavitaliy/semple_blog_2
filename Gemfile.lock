@@ -246,6 +246,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   carrierwave (~> 2.0)
   devise
+  ffi
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
   letter_opener
