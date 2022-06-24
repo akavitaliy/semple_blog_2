@@ -159,7 +159,7 @@ GEM
       activerecord (= 6.1.6)
       activestorage (= 6.1.6)
       activesupport (= 6.1.6)
-      bundler (>= 1.15.0)
+      bundler (= 2.3.16)
       railties (= 6.1.6)
       sprockets-rails (>= 2.0.0)
     rails-dom-testing (2.0.3)
@@ -248,7 +248,7 @@ PLATFORMS
 DEPENDENCIES
   ancestry (~> 2.1)
   bootsnap (>= 1.4.4)
-  bundler
+  bundler (~> 2.3.16)
   byebug
   capybara (>= 3.26)
   carrierwave (~> 2.0)
@@ -278,4 +278,4 @@ RUBY VERSION
    ruby 3.0.0p0
 
 BUNDLED WITH
-   2.2.3
+   2.3.16
